@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Date选择当前日期的前或后N天</title>
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js" ></script>
+</head>
+<body>
+<div class="yesterday">前一天: </div>
+<div class="today">当天: </div>
+<div class="tomorrow">前一天: </div>
+</body>
+<script type="text/javascript" src="./js/getDate.js"></script>
+<script type="text/javascript">
+	$('.yesterday').append(showdate(-1));
+	$('.today').append(showdate(0));
+	$('.tomorrow').append(showdate(1));
+</script>
+</html>
