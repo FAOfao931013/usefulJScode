@@ -11,42 +11,45 @@
 </body>
 <script type="text/javascript">
     function typeofArr(sth) {
-    	var type;
+        var type;
 
-    	switch (Object.prototype.toString.call(sth)) {
-    		case '[object String]':
-    			type = 'String';
-    			break;
-    		case '[object Number]':
-    			type = 'Number';
-    			break;
-    		case '[object Boolean]':
-    			type = 'Boolean';
-    			break;
-    		case '[object Object]':
-    			type = 'Object';
-    			break;
-    		case '[object Array]':
-    			type = 'Array';
-    			break;
-    		case '[object Undefined]':
-    			type = 'Undefined';
-    			break;
-    		case '[object Null]':
-    			type = 'Null';
-    			break;
-    		case '[object Function]':
-    			type = 'Function';
-    			break;
-    		case '[object Date]':
-    			type = 'Date';
-    			break;
-    		case '[object Window]':
-    			type = 'Window';
-    			break;
-    	}
+        switch (Object.prototype.toString.call(sth)) {
+            case '[object String]':
+                type = 'String';
+                break;
+            case '[object Number]':
+                type = 'Number';
+                break;
+            case '[object Boolean]':
+                type = 'Boolean';
+                break;
+            case '[object Object]':
+                type = 'Object';
+                break;
+            case '[object Array]':
+                type = 'Array';
+                break;
+            case '[object Undefined]':
+                type = 'Undefined';
+                break;
+            case '[object Null]':
+                type = 'Null';
+                break;
+            case '[object Function]':
+                type = 'Function';
+                break;
+            case '[object Date]':
+                type = 'Date';
+                break;
+            case '[object Window]':
+                type = 'Window';
+                break;
+            default:
+                return type;
 
-    	return type;
+        }
+
+        return type;
     }
 
     console.log('字符串:' + typeofArr('sth'));
