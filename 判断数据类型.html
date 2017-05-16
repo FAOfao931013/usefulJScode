@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>判断数据类型</title>
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js" ></script>
+<script type="text/javascript" src="./js/dataFomat.js" ></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    function typeofArr(sth) {
+    	var type;
+
+    	switch (Object.prototype.toString.call(sth)) {
+    		case '[object String]':
+    			type = 'String';
+    			break;
+    		case '[object Number]':
+    			type = 'Number';
+    			break;
+    		case '[object Boolean]':
+    			type = 'Boolean';
+    			break;
+    		case '[object Object]':
+    			type = 'Object';
+    			break;
+    		case '[object Array]':
+    			type = 'Array';
+    			break;
+    		case '[object Undefined]':
+    			type = 'Undefined';
+    			break;
+    		case '[object Null]':
+    			type = 'Null';
+    			break;
+    		case '[object Function]':
+    			type = 'Function';
+    			break;
+    		case '[object Date]':
+    			type = 'Date';
+    			break;
+    		case '[object Window]':
+    			type = 'Window';
+    			break;
+    	}
+
+    	return type;
+    }
+
+    console.log('字符串:' + typeofArr('sth'));
+    console.log('数字:' + typeofArr(1));
+    console.log('布尔值:' + typeofArr(true));
+    console.log('对象:' + typeofArr({}));
+    console.log('数组:' + typeofArr([]));
+    console.log('undefind:' + typeofArr());
+    console.log('null:' + typeofArr(null));
+    console.log('function:' + typeofArr(typeofArr));
+    console.log('日期:' + typeofArr(new Date()));
+    console.log('window对象:' + typeofArr(window));
+</script>
+</html>
