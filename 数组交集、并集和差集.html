@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>数组交集、并集和差集</title>
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js" ></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	var arr1 = [1,2,3];
+	var arr2 = [2,3,4];
+
+	//交集
+	var res1 = arr1.filter(item => arr2.includes(item));
+
+	//并集
+	var res2 = arr1.concat(arr2.filter(item => !arr1.includes(item)));
+
+	//差集
+	var res3 = [...arr1,...arr2].filter(item => !arr1.includes(item) || !arr2.includes(item));
+
+	console.log(arr1.join(','));
+	console.log(arr2.join(','));
+
+	console.log('交集 ' + res1);
+	console.log('并集 ' + res2);
+	console.log('差集 ' + res3);
+</script>
+</html>
